@@ -12,8 +12,8 @@ namespace Rock_Paper_Scissor_Project
         {
             string PlayerChoice, CPUChoice;
             int randomInt;
-            Random integer = new Random();
-            randomInt = integer.Next(1, 4);
+            Random rnd = new Random();
+            randomInt = rnd.Next(1, 4);
             
             int playerScore = 0;
             int cpuScore = 0;
@@ -22,7 +22,7 @@ namespace Rock_Paper_Scissor_Project
                     Console.WriteLine("**************");
                     Console.WriteLine("*   WELCOME  * "+ "\n*     TO     *" + "\n* ROCK PAPER * " + "\n*   SCISSOR  *");
                     Console.WriteLine("**************");
-                    Console.Write("CHOOSE ROCK, PAPER OR SCISSORS:");
+                    Console.Write("Choose between ROCK, PAPER and SCISSORS:    ");
                     PlayerChoice = Console.ReadLine();
                     PlayerChoice = PlayerChoice.ToUpper();
 
@@ -85,7 +85,7 @@ namespace Rock_Paper_Scissor_Project
                             }
                             break;
                         default:
-                            Console.WriteLine("Please enter a correct value");
+                            Console.WriteLine("Invalid entry!");
                             break;
                     }
 
