@@ -21,13 +21,12 @@ namespace Rock_Paper_Scissor_Project
                 int scorePlayer = 0;
                 int scoreCPU = 0;
 
+                Console.WriteLine("**************");
+                Console.WriteLine("*   WELCOME  * " + "\n*     TO     *" + "\n* ROCK PAPER * " + "\n*   SCISSOR  *");
+                Console.WriteLine("**************");
+
                 while (scorePlayer < 3 && scoreCPU < 3)
                 {
-
-
-                    Console.WriteLine("**************");
-                    Console.WriteLine("*   WELCOME  * " + "\n*     TO     *" + "\n* ROCK PAPER * " + "\n*   SCISSOR  *");
-                    Console.WriteLine("**************");
                     Console.Write("Choose between ROCK, PAPER and SCISSORS:");
                     inputPlayer = Console.ReadLine();
                     inputPlayer = inputPlayer.ToUpper();
