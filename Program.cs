@@ -18,14 +18,14 @@ namespace Rock_Paper_Scissor_Project
             while (playAgain)
             {
 
-                int scorePlayer = 0;
-                int scoreCPU = 0;
+                int playerScore = 0;
+                int cpuScore = 0;
 
                 Console.WriteLine("**************");
                 Console.WriteLine("*   WELCOME  * " + "\n*     TO     *" + "\n* ROCK PAPER * " + "\n*   SCISSOR  *");
                 Console.WriteLine("**************");
 
-                while (scorePlayer < 3 && scoreCPU < 3)
+                while (playerScore < 3 && cpuScore< 3)
                 {
                     Console.Write("Choose between ROCK, PAPER and SCISSORS:");
                     inputPlayer = Console.ReadLine();
@@ -47,13 +47,14 @@ namespace Rock_Paper_Scissor_Project
                             else if (inputPlayer == "PAPER")
                             {
                                 Console.WriteLine("PLAYER WINS!!\n\n");
-                                scorePlayer++;
+                                playerScore++;
                             }
                             else if (inputPlayer == "SCISSORS")
                             {
                                 Console.WriteLine("CPU WINS!!\n\n");
-                                scoreCPU++;
+                                cpuScore++;
                             }
+                            else { Console.WriteLine("Invalid entry!"); }
                             break;
                         case 2:
                             inputCPU = "PAPER";
@@ -65,13 +66,14 @@ namespace Rock_Paper_Scissor_Project
                             else if (inputPlayer == "ROCK")
                             {
                                 Console.WriteLine("CPU WINS!!\n\n");
-                                scoreCPU++;
+                                cpuScore++;
                             }
                             else if (inputPlayer == "SCISSORS")
                             {
                                 Console.WriteLine("PLAYER WINS!!\n\n");
-                                scorePlayer++;
+                                playerScore++;
                             }
+                            else { Console.WriteLine("Invalid entry!"); }
                             break;
                         case 3:
                             inputCPU = "SCISSORS";
@@ -83,28 +85,29 @@ namespace Rock_Paper_Scissor_Project
                             else if (inputPlayer == "ROCK")
                             {
                                 Console.WriteLine("PLAYER WINS!!\n\n");
-                                scorePlayer++;
+                                playerScore++;
                             }
                             else if (inputPlayer == "PAPER")
                             {
                                 Console.WriteLine("CPU WINS!!\n\n");
-                                scoreCPU++;
+                                cpuScore++;
                             }
+                            else { Console.WriteLine("Invalid entry!"); }
                             break;
                         default:
                             Console.WriteLine("Invalid entry!");
                             break;
                     }
 
-                    Console.WriteLine("\n\nSCORES:\tPLAYER:\t{0}\tCPU:\t{1}", scorePlayer, scoreCPU);
+                    Console.WriteLine("\n\nSCORES:\tPLAYER:\t{0}\tCPU:\t{1}", playerScore, cpuScore);
 
                 }
 
-                if (scorePlayer == 3)
+                if (playerScore == 3)
                 {
                     Console.WriteLine("Player WON!");
                 }
-                else if (scoreCPU == 3)
+                else if (cpuScore == 3)
                 {
                     Console.WriteLine("CPU WON!");
                 }
@@ -113,14 +116,14 @@ namespace Rock_Paper_Scissor_Project
 
                 }
 
-                Console.WriteLine("Do you want to play again?(y/n)");
-                string loop = Console.ReadLine();
-                if (loop == "y")
+                Console.WriteLine("Press y to play again/ press n to quit");
+                string restart = Console.ReadLine();
+                if (restart == "y")
                 {
                     playAgain = true;
                     Console.Clear();
                 }
-                else if (loop == "n")
+                else if (restart == "n")
                 {
                     playAgain = false;
                 }
