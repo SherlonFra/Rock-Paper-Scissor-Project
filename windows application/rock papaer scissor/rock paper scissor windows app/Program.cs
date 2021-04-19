@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rock_papaer_scissor
+namespace rock_paper_scissor_windows_app
 {
     static class Program
     {
